@@ -1,170 +1,258 @@
-# Aix-Marseille Chess Club Website
+# 🏆 Aix-Marseille Chess Club Website
 
-The official chess club website for Aix-Marseille University. A modern blog platform where authenticated users can share chess strategies, tournament updates, and community news.
+A modern, bilingual chess club website for Aix-Marseille University built with the MERN stack (MongoDB, Express.js, React, Node.js) and featuring Cloudinary for image storage.
 
-## Features
+## 🌟 Features
 
-- **Modern React App** - Built with Vite for fast development and optimized builds
-- **Dark Navy Blue Theme** - Beautiful, professional design
-- **User Authentication** - Secure login/register system for university students
-- **Blog System** - Create, read, and interact with posts
-- **Image Upload** - Cloudinary integration for image storage
-- **Responsive Design** - Works perfectly on all devices
-- **Admin Panel** - Manage users and content
+### 🎯 Core Functionality
+- **User Authentication & Authorization**
+  - Secure registration with university email validation
+  - JWT-based authentication
+  - Role-based access control (User/Admin)
+  - Profile management with ELO rating system
 
-## Tech Stack
+- **Content Management**
+  - Create, edit, and delete posts with rich text content
+  - Multi-image upload support via Cloudinary
+  - Post categorization and search functionality
+  - View tracking and comment system
+
+- **Community Features**
+  - Public user profiles with chess statistics
+  - Interactive commenting system
+  - Post sharing and engagement metrics
+  - Responsive design for all devices
+
+### 🌍 Internationalization
+- **Bilingual Support**: English and French
+- **Dynamic Language Switching**: Real-time language changes
+- **Localized Content**: All text, dates, and formats adapt to selected language
+- **Persistent Language Preference**: Remembers user's language choice
+
+### 📚 Educational Resources
+- **Chess Rules & Fundamentals**: Complete guide with interactive sections
+- **Tournament Information**: Schedule, locations, and event details
+- **Training Materials**: Downloadable PDFs and video tutorials
+- **Chess Literature**: Curated collection of classic and modern chess books
+
+### 🎨 Modern UI/UX
+- **Dark Theme**: Navy blue color scheme with excellent contrast
+- **Responsive Design**: Optimized for desktop, tablet, and mobile
+- **Interactive Elements**: Hover effects, animations, and smooth transitions
+- **Accessibility**: WCAG compliant with proper semantic HTML
+
+## 🛠️ Technology Stack
 
 ### Frontend
-- **React 18** - Modern React with hooks and context
-- **Vite** - Fast build tool and dev server
-- **React Router** - Client-side routing
-- **Axios** - HTTP client for API calls
-- **React Hot Toast** - Beautiful notifications
-- **React Icons** - Icon library
-- **Date-fns** - Date formatting utilities
+- **React 18** with Vite for fast development
+- **React Router** for client-side routing
+- **React Context** for state management
+- **react-i18next** for internationalization
+- **React Icons** for consistent iconography
+- **CSS3** with custom properties for theming
 
 ### Backend
-- **Node.js** - JavaScript runtime
-- **Express** - Web framework
-- **MongoDB** - Database
-- **Mongoose** - MongoDB ODM
-- **JWT** - Authentication
-- **Cloudinary** - Image storage
-- **Multer** - File upload handling
+- **Node.js** with Express.js framework
+- **MongoDB** with Mongoose ODM
+- **JWT** for authentication
+- **Multer** for file upload handling
+- **Cloudinary** for cloud image storage
+- **CORS** enabled for cross-origin requests
 
-## Quick Start
+### Development Tools
+- **ESLint** for code quality
+- **Vite** for fast build and development
+- **Hot reload** for development efficiency
+
+## 📦 Installation
 
 ### Prerequisites
 - Node.js (v16 or higher)
 - MongoDB (local or Atlas)
 - Cloudinary account
 
-### Installation
+### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd aix-marseille-chess
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd aix-marseille-chess
-   ```
+### 2. Install Dependencies
 
-2. **Install dependencies**
-   ```bash
-   npm run install-all
-   ```
+#### Backend Setup
+```bash
+cd server
+npm install
+```
 
-3. **Set up environment variables**
-   ```bash
-   cp server/env.example server/.env
-   ```
-   
-   Edit `server/.env` with your configuration:
-   ```env
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-   CLOUDINARY_API_KEY=your_cloudinary_api_key
-   CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-   ```
+#### Frontend Setup
+```bash
+cd client
+npm install
+```
 
-4. **Start the development servers**
-   ```bash
-   npm run dev
-   ```
+### 3. Environment Configuration
 
-This will start both the backend server (port 5000) and the Vite dev server (port 3000).
+#### Backend Environment Variables
+Create a `.env` file in the `server` directory:
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+```
 
-## Available Scripts
+#### Frontend Environment Variables
+Create a `.env` file in the `client` directory:
+```env
+VITE_API_URL=http://localhost:5000/api
+```
 
-- `npm run dev` - Start both server and client in development mode
-- `npm run server` - Start only the backend server
-- `npm run client` - Start only the Vite dev server
-- `npm run build` - Build the client for production
-- `npm start` - Start the production server
+### 4. Start the Application
 
-## Project Structure
+#### Development Mode
+```bash
+# Terminal 1 - Start Backend
+cd server
+npm run dev
+
+# Terminal 2 - Start Frontend
+cd client
+npm run dev
+```
+
+#### Production Mode
+```bash
+# Build frontend
+cd client
+npm run build
+
+# Start production server
+cd server
+npm start
+```
+
+## 🚀 Usage
+
+### For Users
+1. **Registration**: Create an account with your university email
+2. **Browse Posts**: Explore chess strategies, tournament updates, and community content
+3. **Create Content**: Share your chess insights and experiences
+4. **Engage**: Comment on posts and interact with the community
+5. **Learn**: Access educational resources and training materials
+6. **Switch Language**: Use the language switcher in the navigation bar
+
+### For Administrators
+1. **User Management**: Monitor and manage user accounts
+2. **Content Moderation**: Review and moderate posts and comments
+3. **Analytics**: View engagement metrics and user statistics
+4. **Resource Management**: Update tournament schedules and training materials
+
+## 📁 Project Structure
 
 ```
 aix-marseille-chess/
-├── client/                 # Vite React frontend
-│   ├── src/
-│   │   ├── components/     # Reusable components
-│   │   ├── contexts/       # React contexts
-│   │   ├── pages/          # Page components
-│   │   └── App.jsx         # Main app component
-│   ├── public/             # Static assets
-│   └── package.json        # Frontend dependencies
-├── server/                 # Express backend
-│   ├── config/             # Configuration files
-│   ├── middleware/         # Express middleware
-│   ├── models/             # MongoDB models
-│   ├── routes/             # API routes
-│   └── index.js            # Server entry point
-└── package.json            # Root package.json
+├── client/                 # React frontend
+│   ├── public/            # Static assets
+│   │   ├── components/    # Reusable UI components
+│   │   ├── contexts/      # React context providers
+│   │   ├── pages/         # Page components
+│   │   ├── locales/       # Translation files
+│   │   └── utils/         # Utility functions
+│   └── package.json
+├── server/                # Node.js backend
+│   ├── config/           # Configuration files
+│   ├── middleware/       # Express middleware
+│   ├── models/           # MongoDB models
+│   ├── routes/           # API routes
+│   └── package.json
+└── README.md
 ```
 
-## Authentication
-
-The app uses JWT-based authentication. Users must have an email ending in `@etu.univ-amu.fr` to register. The system includes:
-
-- User registration and login
-- Password hashing with bcrypt
-- JWT token management
-- Protected routes
-- Admin role system
-
-## API Endpoints
+## 🌐 API Endpoints
 
 ### Authentication
-- `POST /api/auth/register` - Register new user
+- `POST /api/auth/register` - User registration
 - `POST /api/auth/login` - User login
-- `GET /api/auth/me` - Get current user
-- `PUT /api/auth/profile` - Update profile
+- `GET /api/auth/profile` - Get user profile
 
 ### Posts
 - `GET /api/posts` - Get all posts (with pagination)
-- `GET /api/posts/:id` - Get single post
-- `POST /api/posts` - Create new post (authenticated)
-- `PUT /api/posts/:id` - Update post (author only)
-- `DELETE /api/posts/:id` - Delete post (author only)
-- `POST /api/posts/:id/like` - Like/unlike post
-- `POST /api/posts/:id/comments` - Add comment
-- `DELETE /api/posts/:id/comments/:commentId` - Delete comment
+- `POST /api/posts` - Create new post
+- `GET /api/posts/:id` - Get specific post
+- `PUT /api/posts/:id` - Update post
+- `DELETE /api/posts/:id` - Delete post
 
-## Development
+### Users
+- `GET /api/users/:id` - Get user profile
+- `PUT /api/users/:id` - Update user profile
 
-### Frontend Development
-The frontend uses Vite for fast development:
-- Hot module replacement
-- Fast refresh
-- Optimized builds
-- Proxy configuration for API calls
+## 🎨 Customization
 
-### Backend Development
-The backend uses nodemon for automatic restarts during development.
-
-## Deployment
-
-### Frontend
-Build the client for production:
-```bash
-npm run build
+### Theme Colors
+The application uses CSS custom properties for easy theming. Main colors are defined in `client/src/App.css`:
+```css
+:root {
+  --primary-color: #0f172a;    /* Dark navy blue */
+  --secondary-color: #1e293b;  /* Lighter navy */
+  --accent-color: #3b82f6;     /* Blue accent */
+  --text-primary: #f8fafc;     /* Primary text */
+  --text-secondary: #cbd5e1;   /* Secondary text */
+}
 ```
 
-### Backend
-The server can be deployed to any Node.js hosting platform (Heroku, Vercel, Railway, etc.).
+### Adding New Languages
+1. Create new translation files in `client/src/locales/[language]/translation.json`
+2. Update `client/src/i18n.js` to include the new language
+3. Add language options to the language switcher component
 
-## Contributing
+## 🚀 Deployment
+
+### Render Deployment
+The project includes a `render.yaml` file for easy deployment on Render:
+
+1. Connect your GitHub repository to Render
+2. Render will automatically detect the configuration
+3. Set environment variables in Render dashboard
+4. Deploy with one click
+
+### Manual Deployment
+```bash
+# Build the application
+cd client && npm run build
+cd ../server && npm install
+
+# Deploy to your preferred hosting service
+```
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## License
+## 📝 License
 
-MIT License - see LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
+## 👥 Team
 
-For support, email: chess@univ-amu.fr 
+- **Frontend Development**: React, Vite, CSS3
+- **Backend Development**: Node.js, Express, MongoDB
+- **Design**: Modern, responsive UI/UX
+- **Internationalization**: Bilingual support (EN/FR)
+
+## 📞 Support
+
+For support and questions:
+- Create an issue in the GitHub repository
+- Contact the development team
+- Check the documentation in the `/docs` folder
+
+---
+
+**Built with ❤️ for the Aix-Marseille University Chess Club** 

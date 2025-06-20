@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaChess, FaCalendar, FaBook, FaGraduationCap, FaDownload, FaExternalLinkAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import './Resources.css';
 
 const Resources = () => {
+  const { t } = useTranslation();
   const [expandedSections, setExpandedSections] = useState({
     rules: false,
     schedule: false,
@@ -19,147 +21,130 @@ const Resources = () => {
 
   const chessRules = [
     {
-      title: "Basic Rules",
-      content: [
-        "The game is played on an 8x8 square board with alternating light and dark squares.",
-        "Each player starts with 16 pieces: 1 king, 1 queen, 2 rooks, 2 bishops, 2 knights, and 8 pawns.",
-        "White always moves first.",
-        "The goal is to checkmate the opponent's king.",
-        "A king is in check when it is under attack and must move to safety."
-      ]
+      title: t('resources.sections.rules.basicRules.title'),
+      content: t('resources.sections.rules.basicRules.content', { returnObjects: true })
     },
     {
-      title: "Piece Movements",
-      content: [
-        "King: Moves one square in any direction",
-        "Queen: Moves any number of squares in any direction",
-        "Rook: Moves any number of squares horizontally or vertically",
-        "Bishop: Moves any number of squares diagonally",
-        "Knight: Moves in an L-shape (2 squares in one direction, then 1 square perpendicular)",
-        "Pawn: Moves forward one square, captures diagonally"
-      ]
+      title: t('resources.sections.rules.pieceMovements.title'),
+      content: t('resources.sections.rules.pieceMovements.content', { returnObjects: true })
     },
     {
-      title: "Special Moves",
-      content: [
-        "Castling: King and rook move together for king safety",
-        "En passant: Pawn captures opponent's pawn that just moved two squares",
-        "Pawn promotion: Pawn reaches the opposite end and becomes any piece"
-      ]
+      title: t('resources.sections.rules.specialMoves.title'),
+      content: t('resources.sections.rules.specialMoves.content', { returnObjects: true })
     }
   ];
 
   const tournamentSchedule = [
     {
-      title: "Weekly Club Meetings",
-      time: "Tuesdays & Thursdays",
-      timeDetail: "18:00 - 21:00",
-      location: "Campus Saint-Charles, Room 201",
-      description: "Casual games, strategy discussions, and friendly matches."
+      title: t('resources.sections.tournaments.weeklyMeetings.title'),
+      time: t('resources.sections.tournaments.weeklyMeetings.time'),
+      timeDetail: t('resources.sections.tournaments.weeklyMeetings.timeDetail'),
+      location: t('resources.sections.tournaments.weeklyMeetings.location'),
+      description: t('resources.sections.tournaments.weeklyMeetings.description')
     },
     {
-      title: "Monthly Rapid Tournament",
-      time: "First Saturday of each month",
-      timeDetail: "14:00 - 18:00",
-      location: "Campus Saint-Charles, Main Hall",
-      description: "15+5 time control, prizes for top 3 players."
+      title: t('resources.sections.tournaments.monthlyRapid.title'),
+      time: t('resources.sections.tournaments.monthlyRapid.time'),
+      timeDetail: t('resources.sections.tournaments.monthlyRapid.timeDetail'),
+      location: t('resources.sections.tournaments.monthlyRapid.location'),
+      description: t('resources.sections.tournaments.monthlyRapid.description')
     },
     {
-      title: "University Championship",
-      time: "March 15-20, 2024",
-      timeDetail: "Daily 19:00 - 22:00",
-      location: "Campus Saint-Charles, Auditorium",
-      description: "Annual championship with qualification rounds."
+      title: t('resources.sections.tournaments.universityChampionship.title'),
+      time: t('resources.sections.tournaments.universityChampionship.time'),
+      timeDetail: t('resources.sections.tournaments.universityChampionship.timeDetail'),
+      location: t('resources.sections.tournaments.universityChampionship.location'),
+      description: t('resources.sections.tournaments.universityChampionship.description')
     },
     {
-      title: "Summer Open Tournament",
-      time: "July 10-12, 2024",
-      timeDetail: "10:00 - 18:00 daily",
-      location: "Campus Saint-Charles, Conference Center",
-      description: "Open to all university students and staff."
+      title: t('resources.sections.tournaments.summerOpen.title'),
+      time: t('resources.sections.tournaments.summerOpen.time'),
+      timeDetail: t('resources.sections.tournaments.summerOpen.timeDetail'),
+      location: t('resources.sections.tournaments.summerOpen.location'),
+      description: t('resources.sections.tournaments.summerOpen.description')
     }
   ];
 
   const trainingMaterials = [
     {
-      title: "Opening Principles",
-      type: "PDF",
-      size: "2.3 MB",
-      description: "Essential opening principles and common openings for beginners.",
+      title: t('resources.sections.training.openingPrinciples.title'),
+      type: t('resources.sections.training.openingPrinciples.type'),
+      size: t('resources.sections.training.openingPrinciples.size'),
+      description: t('resources.sections.training.openingPrinciples.description'),
       downloadUrl: "#"
     },
     {
-      title: "Tactical Puzzles Collection",
-      type: "PDF",
-      size: "4.1 MB",
-      description: "500 tactical puzzles ranging from beginner to advanced level.",
+      title: t('resources.sections.training.tacticalPuzzles.title'),
+      type: t('resources.sections.training.tacticalPuzzles.type'),
+      size: t('resources.sections.training.tacticalPuzzles.size'),
+      description: t('resources.sections.training.tacticalPuzzles.description'),
       downloadUrl: "#"
     },
     {
-      title: "Endgame Fundamentals",
-      type: "PDF",
-      size: "3.7 MB",
-      description: "Basic endgame techniques and winning strategies.",
+      title: t('resources.sections.training.endgameFundamentals.title'),
+      type: t('resources.sections.training.endgameFundamentals.type'),
+      size: t('resources.sections.training.endgameFundamentals.size'),
+      description: t('resources.sections.training.endgameFundamentals.description'),
       downloadUrl: "#"
     },
     {
-      title: "Strategic Planning Guide",
-      type: "PDF",
-      size: "5.2 MB",
-      description: "How to develop long-term plans and evaluate positions.",
+      title: t('resources.sections.training.strategicPlanning.title'),
+      type: t('resources.sections.training.strategicPlanning.type'),
+      size: t('resources.sections.training.strategicPlanning.size'),
+      description: t('resources.sections.training.strategicPlanning.description'),
       downloadUrl: "#"
     },
     {
-      title: "Chess Notation Tutorial",
-      type: "Video",
-      size: "15 min",
-      description: "Learn algebraic notation to record and analyze games.",
+      title: t('resources.sections.training.notationTutorial.title'),
+      type: t('resources.sections.training.notationTutorial.type'),
+      size: t('resources.sections.training.notationTutorial.size'),
+      description: t('resources.sections.training.notationTutorial.description'),
       downloadUrl: "#"
     }
   ];
 
   const chessLiterature = [
     {
-      title: "My System",
-      author: "Aron Nimzowitsch",
-      year: "1925",
-      description: "Classic work on chess strategy and positional play.",
-      category: "Strategy"
+      title: t('resources.sections.literature.mySystem.title'),
+      author: t('resources.sections.literature.mySystem.author'),
+      year: t('resources.sections.literature.mySystem.year'),
+      description: t('resources.sections.literature.mySystem.description'),
+      category: t('resources.sections.literature.mySystem.category')
     },
     {
-      title: "Think Like a Grandmaster",
-      author: "Alexander Kotov",
-      year: "1971",
-      description: "Insights into the thinking process of strong players.",
-      category: "Psychology"
+      title: t('resources.sections.literature.thinkLikeGrandmaster.title'),
+      author: t('resources.sections.literature.thinkLikeGrandmaster.author'),
+      year: t('resources.sections.literature.thinkLikeGrandmaster.year'),
+      description: t('resources.sections.literature.thinkLikeGrandmaster.description'),
+      category: t('resources.sections.literature.thinkLikeGrandmaster.category')
     },
     {
-      title: "Zurich International Chess Tournament 1953",
-      author: "David Bronstein",
-      year: "1956",
-      description: "Famous tournament book with detailed analysis.",
-      category: "Tournament"
+      title: t('resources.sections.literature.zurichTournament.title'),
+      author: t('resources.sections.literature.zurichTournament.author'),
+      year: t('resources.sections.literature.zurichTournament.year'),
+      description: t('resources.sections.literature.zurichTournament.description'),
+      category: t('resources.sections.literature.zurichTournament.category')
     },
     {
-      title: "The Art of Attack in Chess",
-      author: "Vladimir Vuković",
-      year: "1965",
-      description: "Comprehensive guide to attacking play.",
-      category: "Tactics"
+      title: t('resources.sections.literature.artOfAttack.title'),
+      author: t('resources.sections.literature.artOfAttack.author'),
+      year: t('resources.sections.literature.artOfAttack.year'),
+      description: t('resources.sections.literature.artOfAttack.description'),
+      category: t('resources.sections.literature.artOfAttack.category')
     },
     {
-      title: "Positional Play",
-      author: "Mikhail Botvinnik",
-      year: "1973",
-      description: "Lessons from the former World Champion.",
-      category: "Strategy"
+      title: t('resources.sections.literature.positionalPlay.title'),
+      author: t('resources.sections.literature.positionalPlay.author'),
+      year: t('resources.sections.literature.positionalPlay.year'),
+      description: t('resources.sections.literature.positionalPlay.description'),
+      category: t('resources.sections.literature.positionalPlay.category')
     },
     {
-      title: "The Life and Games of Mikhail Tal",
-      author: "Mikhail Tal",
-      year: "1976",
-      description: "Autobiography with annotated games.",
-      category: "Biography"
+      title: t('resources.sections.literature.talLifeAndGames.title'),
+      author: t('resources.sections.literature.talLifeAndGames.author'),
+      year: t('resources.sections.literature.talLifeAndGames.year'),
+      description: t('resources.sections.literature.talLifeAndGames.description'),
+      category: t('resources.sections.literature.talLifeAndGames.category')
     }
   ];
 
@@ -168,8 +153,8 @@ const Resources = () => {
       <div className="container">
         {/* Header */}
         <div className="resources-header">
-          <h1>Chess Resources</h1>
-          <p>Everything you need to improve your chess game and stay connected with the community</p>
+          <h1>{t('resources.title')}</h1>
+          <p>{t('resources.subtitle')}</p>
         </div>
 
         {/* Chess Rules Section */}
@@ -177,7 +162,7 @@ const Resources = () => {
           <div className="section-header" onClick={() => toggleSection('rules')}>
             <div className="section-title">
               <FaChess className="section-icon" />
-              <h2>Chess Rules & Fundamentals</h2>
+              <h2>{t('resources.sections.rules.title')}</h2>
             </div>
             {expandedSections.rules ? <FaChevronUp /> : <FaChevronDown />}
           </div>
@@ -205,7 +190,7 @@ const Resources = () => {
           <div className="section-header" onClick={() => toggleSection('schedule')}>
             <div className="section-title">
               <FaCalendar className="section-icon" />
-              <h2>Tournament Schedule</h2>
+              <h2>{t('resources.sections.tournaments.title')}</h2>
             </div>
             {expandedSections.schedule ? <FaChevronUp /> : <FaChevronDown />}
           </div>
@@ -220,8 +205,8 @@ const Resources = () => {
                       <span className="event-time">{event.time}</span>
                     </div>
                     <div className="event-details">
-                      <p><strong>Time:</strong> {event.timeDetail}</p>
-                      <p><strong>Location:</strong> {event.location}</p>
+                      <p><strong>{t('resources.time')}:</strong> {event.timeDetail}</p>
+                      <p><strong>{t('resources.location')}:</strong> {event.location}</p>
                       <p>{event.description}</p>
                     </div>
                   </div>
@@ -236,7 +221,7 @@ const Resources = () => {
           <div className="section-header" onClick={() => toggleSection('training')}>
             <div className="section-title">
               <FaGraduationCap className="section-icon" />
-              <h2>Training Materials</h2>
+              <h2>{t('resources.sections.training.title')}</h2>
             </div>
             {expandedSections.training ? <FaChevronUp /> : <FaChevronDown />}
           </div>
@@ -248,14 +233,15 @@ const Resources = () => {
                   <div key={index} className="material-card">
                     <div className="material-header">
                       <h3>{material.title}</h3>
-                      <span className="material-type">{material.type}</span>
+                      <div className="material-meta">
+                        <span className="material-type">{material.type}</span>
+                        <span className="material-size">{material.size}</span>
+                      </div>
                     </div>
                     <p className="material-description">{material.description}</p>
-                    <div className="material-footer">
-                      <span className="material-size">{material.size}</span>
-                      <button className="btn btn-primary btn-sm">
-                        <FaDownload />
-                        Download
+                    <div className="material-actions">
+                      <button className="btn btn-primary">
+                        <FaDownload /> {t('resources.download')}
                       </button>
                     </div>
                   </div>
@@ -270,7 +256,7 @@ const Resources = () => {
           <div className="section-header" onClick={() => toggleSection('literature')}>
             <div className="section-title">
               <FaBook className="section-icon" />
-              <h2>Chess Literature</h2>
+              <h2>{t('resources.sections.literature.title')}</h2>
             </div>
             {expandedSections.literature ? <FaChevronUp /> : <FaChevronDown />}
           </div>
@@ -284,12 +270,16 @@ const Resources = () => {
                       <h3>{book.title}</h3>
                       <span className="book-category">{book.category}</span>
                     </div>
-                    <p className="book-author">by {book.author} ({book.year})</p>
-                    <p className="book-description">{book.description}</p>
-                    <button className="btn btn-secondary btn-sm">
-                      <FaExternalLinkAlt />
-                      Learn More
-                    </button>
+                    <div className="book-details">
+                      <p><strong>{t('resources.author')}:</strong> {book.author}</p>
+                      <p><strong>{t('resources.year')}:</strong> {book.year}</p>
+                      <p className="book-description">{book.description}</p>
+                    </div>
+                    <div className="book-actions">
+                      <button className="btn btn-secondary">
+                        <FaExternalLinkAlt /> {t('resources.view')}
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>

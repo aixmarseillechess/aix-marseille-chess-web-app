@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '../contexts/AuthContext';
 import { usePosts } from '../contexts/PostContext';
 import { FaChess, FaUsers, FaTrophy, FaCalendar, FaArrowRight, FaEye, FaComment, FaGraduationCap, FaBook } from 'react-icons/fa';
@@ -7,6 +8,7 @@ import { formatDistanceToNow } from 'date-fns';
 import './Home.css';
 
 const Home = () => {
+  const { t } = useTranslation();
   const { user, isAuthenticated } = useAuth();
   const { posts, getPosts } = usePosts();
   const navigate = useNavigate();
@@ -25,10 +27,10 @@ const Home = () => {
   };
 
   const stats = [
-    { icon: FaUsers, value: '150+', label: 'Active Members' },
-    { icon: FaTrophy, value: '25+', label: 'Tournaments Won' },
-    { icon: FaCalendar, value: '10+', label: 'Years of Excellence' },
-    { icon: FaChess, value: '1000+', label: 'Games Played' }
+    { icon: FaUsers, value: '150+', label: t('home.stats.activeMembers') },
+    { icon: FaTrophy, value: '25+', label: t('home.stats.tournamentsWon') },
+    { icon: FaCalendar, value: '10+', label: t('home.stats.yearsOfExcellence') },
+    { icon: FaChess, value: '1000+', label: t('home.stats.gamesPlayed') }
   ];
 
   const featuredPosts = posts.slice(0, 3);
@@ -41,25 +43,23 @@ const Home = () => {
           <div className="hero-content">
             <div className="hero-text">
               <h1 className="hero-title">
-                Welcome to <span className="highlight">Aix-Marseille Chess</span>
+                {t('home.hero.title')} <span className="highlight">{t('home.hero.highlight')}</span>
               </h1>
               <p className="hero-subtitle">
-                The official chess club of Aix-Marseille University. 
-                Join our community of chess enthusiasts, improve your game, 
-                and participate in exciting tournaments.
+                {t('home.hero.subtitle')}
               </p>
               <div className="hero-buttons">
                 {isAuthenticated ? (
                   <Link to="/create-post" className="btn btn-primary btn-lg">
-                    Create Post
+                    {t('navigation.createPost')}
                   </Link>
                 ) : (
                   <Link to="/register" className="btn btn-primary btn-lg">
-                    Join Our Club
+                    {t('home.hero.joinClub')}
                   </Link>
                 )}
                 <Link to="/posts" className="btn btn-secondary btn-lg">
-                  Read Posts
+                  {t('home.hero.readPosts')}
                 </Link>
               </div>
             </div>
@@ -95,9 +95,9 @@ const Home = () => {
       <section className="featured-posts">
         <div className="container">
           <div className="section-header">
-            <h2>Latest Posts</h2>
+            <h2>{t('home.featuredPosts.title')}</h2>
             <Link to="/posts" className="view-all-link">
-              View All Posts <FaArrowRight />
+              {t('home.featuredPosts.viewAll')} <FaArrowRight />
             </Link>
           </div>
           
@@ -123,7 +123,7 @@ const Home = () => {
                             className="author-avatar"
                         />
                         <span className="post-author">
-                            {post.author ? `${post.author.firstName} ${post.author.lastName}` : 'Anonymous'}
+                            {post.author ? `${post.author.firstName} ${post.author.lastName}` : t('common.anonymous')}
                         </span>
                       </Link>
                       <span className="post-date">
@@ -152,11 +152,11 @@ const Home = () => {
           ) : (
             <div className="no-posts">
               <FaChess className="no-posts-icon" />
-              <h3>No posts yet</h3>
-              <p>Be the first to share something with the chess community!</p>
+              <h3>{t('home.featuredPosts.noPosts')}</h3>
+              <p>{t('home.featuredPosts.noPostsMessage')}</p>
               {isAuthenticated && (
                 <Link to="/create-post" className="btn btn-primary">
-                  Create First Post
+                  {t('home.featuredPosts.createFirstPost')}
                 </Link>
               )}
             </div>
@@ -168,24 +168,23 @@ const Home = () => {
       <section className="cta">
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Join the Chess Community?</h2>
+            <h2>{t('home.cta.title')}</h2>
             <p>
-              Connect with fellow chess enthusiasts, share strategies, 
-              and participate in exciting tournaments.
+              {t('home.cta.subtitle')}
             </p>
             <div className="cta-buttons">
               {!isAuthenticated ? (
                 <>
                   <Link to="/register" className="btn btn-primary btn-lg">
-                    Register Now
+                    {t('home.cta.registerNow')}
                   </Link>
                   <Link to="/login" className="btn btn-secondary btn-lg">
-                    Login
+                    {t('navigation.login')}
                   </Link>
                 </>
               ) : (
                 <Link to="/create-post" className="btn btn-primary btn-lg">
-                  Create Your First Post
+                  {t('home.cta.createFirstPost')}
                 </Link>
               )}
             </div>
@@ -197,40 +196,40 @@ const Home = () => {
       <section className="resources-preview">
         <div className="container">
           <div className="section-header">
-            <h2>Chess Resources</h2>
-            <p>Improve your game with our comprehensive chess resources</p>
+            <h2>{t('home.resources.title')}</h2>
+            <p>{t('home.resources.subtitle')}</p>
           </div>
           <div className="resources-grid">
             <div className="resource-card">
               <FaChess className="resource-icon" />
-              <h3>Chess Rules</h3>
-              <p>Learn the fundamentals and advanced rules of chess</p>
+              <h3>{t('home.resources.chessRules.title')}</h3>
+              <p>{t('home.resources.chessRules.description')}</p>
               <Link to="/resources" className="btn btn-secondary">
-                Learn More
+                {t('home.resources.chessRules.button')}
               </Link>
             </div>
             <div className="resource-card">
               <FaCalendar className="resource-icon" />
-              <h3>Tournament Schedule</h3>
-              <p>Stay updated with upcoming tournaments and events</p>
+              <h3>{t('home.resources.tournamentSchedule.title')}</h3>
+              <p>{t('home.resources.tournamentSchedule.description')}</p>
               <Link to="/resources" className="btn btn-secondary">
-                View Schedule
+                {t('home.resources.tournamentSchedule.button')}
               </Link>
             </div>
             <div className="resource-card">
               <FaGraduationCap className="resource-icon" />
-              <h3>Training Materials</h3>
-              <p>Access study materials and training resources</p>
+              <h3>{t('home.resources.trainingMaterials.title')}</h3>
+              <p>{t('home.resources.trainingMaterials.description')}</p>
               <Link to="/resources" className="btn btn-secondary">
-                Get Materials
+                {t('home.resources.trainingMaterials.button')}
               </Link>
             </div>
             <div className="resource-card">
               <FaBook className="resource-icon" />
-              <h3>Chess Literature</h3>
-              <p>Discover classic and modern chess books</p>
+              <h3>{t('home.resources.chessLiterature.title')}</h3>
+              <p>{t('home.resources.chessLiterature.description')}</p>
               <Link to="/resources" className="btn btn-secondary">
-                Browse Books
+                {t('home.resources.chessLiterature.button')}
               </Link>
             </div>
           </div>

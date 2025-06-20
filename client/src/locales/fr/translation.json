@@ -1,0 +1,382 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "submit": "Soumettre",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "view": "Voir",
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "yes": "Oui",
+    "no": "Non",
+    "confirm": "Confirmer",
+    "anonymous": "Anonyme"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "posts": "Publications",
+    "createPost": "Créer une publication",
+    "profile": "Profil",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "resources": "Ressources",
+    "admin": "Administration",
+    "language": "Langue"
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenue au",
+      "highlight": "Club d'Échecs Aix-Marseille",
+      "subtitle": "Le club d'échecs officiel de l'Université Aix-Marseille. Rejoignez notre communauté d'amateurs d'échecs, améliorez votre jeu et participez à des tournois passionnants.",
+      "joinClub": "Rejoindre le Club",
+      "readPosts": "Lire les Publications"
+    },
+    "stats": {
+      "activeMembers": "Membres Actifs",
+      "tournamentsWon": "Tournois Gagnés",
+      "yearsOfExcellence": "Années d'Excellence",
+      "gamesPlayed": "Parties Jouées"
+    },
+    "featuredPosts": {
+      "title": "Dernières Publications",
+      "viewAll": "Voir Toutes les Publications",
+      "noPosts": "Aucune publication pour le moment",
+      "noPostsMessage": "Soyez le premier à partager quelque chose avec la communauté d'échecs !",
+      "createFirstPost": "Créer la Première Publication"
+    },
+    "cta": {
+      "title": "Prêt à Rejoindre la Communauté d'Échecs ?",
+      "subtitle": "Connectez-vous avec d'autres passionnés d'échecs, partagez des stratégies et participez à des tournois passionnants.",
+      "registerNow": "S'inscrire Maintenant",
+      "createFirstPost": "Créer Votre Première Publication"
+    },
+    "resources": {
+      "title": "Ressources d'Échecs",
+      "subtitle": "Améliorez votre jeu avec nos ressources d'échecs complètes",
+      "chessRules": {
+        "title": "Règles d'Échecs",
+        "description": "Apprenez les règles fondamentales et avancées des échecs",
+        "button": "En Savoir Plus"
+      },
+      "tournamentSchedule": {
+        "title": "Calendrier des Tournois",
+        "description": "Restez informé des tournois et événements à venir",
+        "button": "Voir le Calendrier"
+      },
+      "trainingMaterials": {
+        "title": "Matériel d'Entraînement",
+        "description": "Accédez aux matériels d'étude et ressources d'entraînement",
+        "button": "Obtenir les Matériels"
+      },
+      "chessLiterature": {
+        "title": "Littérature d'Échecs",
+        "description": "Découvrez les livres d'échecs classiques et modernes",
+        "button": "Parcourir les Livres"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Bon Retour",
+      "subtitle": "Connectez-vous à votre compte du club d'échecs",
+      "email": "Email",
+      "password": "Mot de passe",
+      "rememberMe": "Se souvenir de moi",
+      "forgotPassword": "Mot de passe oublié ?",
+      "signIn": "Se Connecter",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "signUp": "S'inscrire",
+      "errors": {
+        "invalidCredentials": "Email ou mot de passe invalide",
+        "emailRequired": "L'email est requis",
+        "passwordRequired": "Le mot de passe est requis"
+      }
+    },
+    "register": {
+      "title": "Rejoindre le Club d'Échecs",
+      "subtitle": "Créez votre compte pour commencer votre parcours d'échecs",
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "username": "Nom d'utilisateur",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "agreeTerms": "J'accepte les conditions d'utilisation",
+      "createAccount": "Créer un Compte",
+      "alreadyHaveAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter",
+      "errors": {
+        "firstNameRequired": "Le prénom est requis",
+        "lastNameRequired": "Le nom de famille est requis",
+        "usernameRequired": "Le nom d'utilisateur est requis",
+        "emailRequired": "L'email est requis",
+        "emailInvalid": "Veuillez entrer un email valide",
+        "emailDomain": "Seuls les emails de l'Université Aix-Marseille (@etu.univ-amu.fr) sont autorisés",
+        "passwordRequired": "Le mot de passe est requis",
+        "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères",
+        "passwordsNotMatch": "Les mots de passe ne correspondent pas",
+        "termsRequired": "Vous devez accepter les conditions d'utilisation"
+      }
+    }
+  },
+  "posts": {
+    "title": "Publications du Club d'Échecs",
+    "subtitle": "Découvrez des stratégies, des mises à jour de tournois et des insights d'échecs de notre communauté",
+    "searchPlaceholder": "Rechercher des publications...",
+    "createPost": "Créer une Publication",
+    "noPosts": "Aucune publication trouvée",
+    "noPostsMessage": "Aucune publication n'a encore été créée.",
+    "createFirstPost": "Créer la Première Publication",
+    "loading": "Chargement des publications...",
+    "categories": {
+      "all": "Tout",
+      "general": "Général",
+      "strategy": "Stratégie",
+      "tournament": "Tournoi",
+      "training": "Entraînement",
+      "news": "Actualités",
+      "analysis": "Analyse"
+    }
+  },
+  "post": {
+    "create": {
+      "title": "Créer une Nouvelle Publication",
+      "subtitle": "Partagez vos insights d'échecs avec la communauté",
+      "titleLabel": "Titre de la Publication",
+      "contentLabel": "Contenu",
+      "categoryLabel": "Catégorie",
+      "imagesLabel": "Images (optionnel)",
+      "publish": "Publier la Publication",
+      "draft": "Enregistrer comme Brouillon",
+      "errors": {
+        "titleRequired": "Le titre est requis",
+        "contentRequired": "Le contenu est requis",
+        "categoryRequired": "La catégorie est requise"
+      }
+    },
+    "detail": {
+      "answers": "Réponses",
+      "writeAnswer": "Écrivez votre réponse...",
+      "postAnswer": "Publier la Réponse",
+      "loginToAnswer": "Connectez-vous pour publier une réponse.",
+      "deletePost": "Supprimer la Publication",
+      "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette publication ? Cette action ne peut pas être annulée."
+    },
+    "stats": {
+      "views": "vues",
+      "comments": "commentaires"
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "personalInfo": "Informations Personnelles",
+    "chessInfo": "Informations d'Échecs",
+    "bio": "Biographie",
+    "bioPlaceholder": "Parlez-nous de vous et de votre parcours d'échecs...",
+    "eloRating": "Classement ELO",
+    "profilePicture": "Photo de Profil",
+    "updateProfile": "Mettre à Jour le Profil",
+    "profileUpdated": "Profil mis à jour avec succès !",
+    "errors": {
+      "firstNameRequired": "Le prénom est requis",
+      "lastNameRequired": "Le nom de famille est requis",
+      "bioMaxLength": "La biographie ne peut pas dépasser 500 caractères",
+      "eloInvalid": "Le classement ELO doit être un nombre positif"
+    }
+  },
+  "userProfile": {
+    "recentPosts": "Publications Récentes",
+    "noPosts": "Cet utilisateur n'a pas encore fait de publications.",
+    "userNotFound": "Utilisateur non trouvé."
+  },
+  "resources": {
+    "title": "Ressources d'Échecs",
+    "subtitle": "Tout ce dont vous avez besoin pour améliorer votre jeu d'échecs et rester connecté avec la communauté",
+    "sections": {
+      "rules": {
+        "title": "Règles d'Échecs",
+        "subtitle": "Règles et fondamentaux",
+        "basicRules": {
+          "title": "Règles de Base",
+          "content": [
+            "Le jeu se joue sur un échiquier de 8x8 cases avec des cases claires et sombres alternées.",
+            "Chaque joueur commence avec 16 pièces : 1 roi, 1 dame, 2 tours, 2 fous, 2 cavaliers et 8 pions.",
+            "Les blancs jouent toujours en premier.",
+            "L'objectif est de faire échec et mat au roi adverse.",
+            "Un roi est en échec quand il est attaqué et doit se déplacer pour se mettre en sécurité."
+          ]
+        },
+        "pieceMovements": {
+          "title": "Mouvements des Pièces",
+          "content": [
+            "Roi : Se déplace d'une case dans n'importe quelle direction",
+            "Dame : Se déplace d'un nombre quelconque de cases dans n'importe quelle direction",
+            "Tour : Se déplace d'un nombre quelconque de cases horizontalement ou verticalement",
+            "Fou : Se déplace d'un nombre quelconque de cases en diagonale",
+            "Cavalier : Se déplace en forme de L (2 cases dans une direction, puis 1 case perpendiculairement)",
+            "Pion : Se déplace d'une case vers l'avant, capture en diagonale"
+          ]
+        },
+        "specialMoves": {
+          "title": "Coups Spéciaux",
+          "content": [
+            "Roque : Le roi et la tour se déplacent ensemble pour la sécurité du roi",
+            "En passant : Un pion capture le pion adverse qui vient de se déplacer de deux cases",
+            "Promotion : Un pion atteint l'extrémité opposée et devient n'importe quelle pièce"
+          ]
+        }
+      },
+      "tournaments": {
+        "title": "Calendrier des Tournois",
+        "subtitle": "Informations sur les tournois",
+        "weeklyMeetings": {
+          "title": "Réunions Hebdomadaires du Club",
+          "time": "Mardis et Jeudis",
+          "timeDetail": "18h00 - 21h00",
+          "location": "Campus Saint-Charles, Salle 201",
+          "description": "Parties amicales, discussions stratégiques et matches conviviaux."
+        },
+        "monthlyRapid": {
+          "title": "Tournoi Rapide Mensuel",
+          "time": "Premier samedi de chaque mois",
+          "timeDetail": "14h00 - 18h00",
+          "location": "Campus Saint-Charles, Hall Principal",
+          "description": "Contrôle de temps 15+5, prix pour les 3 premiers joueurs."
+        },
+        "universityChampionship": {
+          "title": "Championnat Universitaire",
+          "time": "15-20 mars 2024",
+          "timeDetail": "Quotidien 19h00 - 22h00",
+          "location": "Campus Saint-Charles, Auditorium",
+          "description": "Championnat annuel avec tours de qualification."
+        },
+        "summerOpen": {
+          "title": "Tournoi d'Été Ouvert",
+          "time": "10-12 juillet 2024",
+          "timeDetail": "10h00 - 18h00 quotidien",
+          "location": "Campus Saint-Charles, Centre de Conférences",
+          "description": "Ouvert à tous les étudiants et personnels universitaires."
+        }
+      },
+      "training": {
+        "title": "Matériel d'Entraînement",
+        "subtitle": "Ressources d'étude et d'entraînement",
+        "openingPrinciples": {
+          "title": "Principes d'Ouverture",
+          "type": "PDF",
+          "size": "2,3 Mo",
+          "description": "Principes d'ouverture essentiels et ouvertures communes pour débutants."
+        },
+        "tacticalPuzzles": {
+          "title": "Collection d'Exercices Tactiques",
+          "type": "PDF",
+          "size": "4,1 Mo",
+          "description": "500 exercices tactiques du niveau débutant à avancé."
+        },
+        "endgameFundamentals": {
+          "title": "Fondamentaux des Finales",
+          "type": "PDF",
+          "size": "3,7 Mo",
+          "description": "Techniques de finale de base et stratégies gagnantes."
+        },
+        "strategicPlanning": {
+          "title": "Guide de Planification Stratégique",
+          "type": "PDF",
+          "size": "5,2 Mo",
+          "description": "Comment développer des plans à long terme et évaluer les positions."
+        },
+        "notationTutorial": {
+          "title": "Tutoriel de Notation",
+          "type": "Vidéo",
+          "size": "15 min",
+          "description": "Apprenez la notation algébrique pour enregistrer et analyser les parties."
+        }
+      },
+      "literature": {
+        "title": "Littérature d'Échecs",
+        "subtitle": "Livres et articles d'échecs classiques et modernes",
+        "mySystem": {
+          "title": "Mon Système",
+          "author": "Aron Nimzowitsch",
+          "year": "1925",
+          "description": "Ouvrage classique sur la stratégie et le jeu positionnel aux échecs.",
+          "category": "Stratégie"
+        },
+        "thinkLikeGrandmaster": {
+          "title": "Penser comme un Grand Maître",
+          "author": "Alexander Kotov",
+          "year": "1971",
+          "description": "Aperçus du processus de réflexion des joueurs forts.",
+          "category": "Psychologie"
+        },
+        "zurichTournament": {
+          "title": "Tournoi International d'Échecs de Zurich 1953",
+          "author": "David Bronstein",
+          "year": "1956",
+          "description": "Livre de tournoi célèbre avec analyse détaillée.",
+          "category": "Tournoi"
+        },
+        "artOfAttack": {
+          "title": "L'Art de l'Attaque aux Échecs",
+          "author": "Vladimir Vuković",
+          "year": "1965",
+          "description": "Guide complet du jeu d'attaque.",
+          "category": "Tactique"
+        },
+        "positionalPlay": {
+          "title": "Le Jeu Positionnel",
+          "author": "Mikhail Botvinnik",
+          "year": "1973",
+          "description": "Leçons de l'ancien Champion du Monde.",
+          "category": "Stratégie"
+        },
+        "talLifeAndGames": {
+          "title": "La Vie et les Parties de Mikhail Tal",
+          "author": "Mikhail Tal",
+          "year": "1976",
+          "description": "Autobiographie avec parties annotées.",
+          "category": "Biographie"
+        }
+      }
+    },
+    "download": "Télécharger",
+    "view": "Voir",
+    "time": "Heure",
+    "location": "Lieu",
+    "type": "Type",
+    "size": "Taille",
+    "author": "Auteur",
+    "year": "Année",
+    "category": "Catégorie"
+  },
+  "admin": {
+    "title": "Tableau de Bord Administrateur",
+    "users": "Utilisateurs",
+    "posts": "Publications",
+    "statistics": "Statistiques",
+    "totalUsers": "Total des Utilisateurs",
+    "totalPosts": "Total des Publications",
+    "activeUsers": "Utilisateurs Actifs",
+    "recentActivity": "Activité Récente"
+  },
+  "errors": {
+    "notFound": "Page non trouvée",
+    "unauthorized": "Vous n'êtes pas autorisé à accéder à cette page",
+    "serverError": "Quelque chose s'est mal passé. Veuillez réessayer plus tard.",
+    "networkError": "Erreur réseau. Veuillez vérifier votre connexion.",
+    "validationError": "Veuillez vérifier vos données et réessayer."
+  }
+} 

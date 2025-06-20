@@ -84,6 +84,9 @@
 /* Auth Section */
 .navbar-auth {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .auth-buttons {

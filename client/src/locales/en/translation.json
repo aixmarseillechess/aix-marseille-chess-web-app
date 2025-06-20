@@ -1,0 +1,382 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "view": "View",
+    "create": "Create",
+    "update": "Update",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "close": "Close",
+    "open": "Open",
+    "yes": "Yes",
+    "no": "No",
+    "confirm": "Confirm",
+    "anonymous": "Anonymous"
+  },
+  "navigation": {
+    "home": "Home",
+    "posts": "Posts",
+    "createPost": "Create Post",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "resources": "Resources",
+    "admin": "Admin",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to",
+      "highlight": "Aix-Marseille Chess",
+      "subtitle": "The official chess club of Aix-Marseille University. Join our community of chess enthusiasts, improve your game, and participate in exciting tournaments.",
+      "joinClub": "Join Our Club",
+      "readPosts": "Read Posts"
+    },
+    "stats": {
+      "activeMembers": "Active Members",
+      "tournamentsWon": "Tournaments Won",
+      "yearsOfExcellence": "Years of Excellence",
+      "gamesPlayed": "Games Played"
+    },
+    "featuredPosts": {
+      "title": "Latest Posts",
+      "viewAll": "View All Posts",
+      "noPosts": "No posts yet",
+      "noPostsMessage": "Be the first to share something with the chess community!",
+      "createFirstPost": "Create First Post"
+    },
+    "cta": {
+      "title": "Ready to Join the Chess Community?",
+      "subtitle": "Connect with fellow chess enthusiasts, share strategies, and participate in exciting tournaments.",
+      "registerNow": "Register Now",
+      "createFirstPost": "Create Your First Post"
+    },
+    "resources": {
+      "title": "Chess Resources",
+      "subtitle": "Improve your game with our comprehensive chess resources",
+      "chessRules": {
+        "title": "Chess Rules",
+        "description": "Learn the fundamentals and advanced rules of chess",
+        "button": "Learn More"
+      },
+      "tournamentSchedule": {
+        "title": "Tournament Schedule",
+        "description": "Stay updated with upcoming tournaments and events",
+        "button": "View Schedule"
+      },
+      "trainingMaterials": {
+        "title": "Training Materials",
+        "description": "Access study materials and training resources",
+        "button": "Get Materials"
+      },
+      "chessLiterature": {
+        "title": "Chess Literature",
+        "description": "Discover classic and modern chess books",
+        "button": "Browse Books"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your chess club account",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "errors": {
+        "invalidCredentials": "Invalid email or password",
+        "emailRequired": "Email is required",
+        "passwordRequired": "Password is required"
+      }
+    },
+    "register": {
+      "title": "Join the Chess Club",
+      "subtitle": "Create your account to start your chess journey",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "agreeTerms": "I agree to the terms and conditions",
+      "createAccount": "Create Account",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "errors": {
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "usernameRequired": "Username is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "emailDomain": "Only Aix-Marseille University emails (@etu.univ-amu.fr) are allowed",
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 6 characters",
+        "passwordsNotMatch": "Passwords do not match",
+        "termsRequired": "You must agree to the terms and conditions"
+      }
+    }
+  },
+  "posts": {
+    "title": "Chess Club Posts",
+    "subtitle": "Discover strategies, tournament updates, and chess insights from our community",
+    "searchPlaceholder": "Search posts...",
+    "createPost": "Create Post",
+    "noPosts": "No posts found",
+    "noPostsMessage": "No posts have been created yet.",
+    "createFirstPost": "Create First Post",
+    "loading": "Loading posts...",
+    "categories": {
+      "all": "All",
+      "general": "General",
+      "strategy": "Strategy",
+      "tournament": "Tournament",
+      "training": "Training",
+      "news": "News",
+      "analysis": "Analysis"
+    }
+  },
+  "post": {
+    "create": {
+      "title": "Create New Post",
+      "subtitle": "Share your chess insights with the community",
+      "titleLabel": "Post Title",
+      "contentLabel": "Content",
+      "categoryLabel": "Category",
+      "imagesLabel": "Images (optional)",
+      "publish": "Publish Post",
+      "draft": "Save as Draft",
+      "errors": {
+        "titleRequired": "Title is required",
+        "contentRequired": "Content is required",
+        "categoryRequired": "Category is required"
+      }
+    },
+    "detail": {
+      "answers": "Answers",
+      "writeAnswer": "Write your answer...",
+      "postAnswer": "Post Answer",
+      "loginToAnswer": "Log in to post an answer.",
+      "deletePost": "Delete Post",
+      "deleteConfirm": "Are you sure you want to delete this post? This action cannot be undone."
+    },
+    "stats": {
+      "views": "views",
+      "comments": "comments"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "personalInfo": "Personal Information",
+    "chessInfo": "Chess Information",
+    "bio": "Bio",
+    "bioPlaceholder": "Tell us about yourself and your chess journey...",
+    "eloRating": "ELO Rating",
+    "profilePicture": "Profile Picture",
+    "updateProfile": "Update Profile",
+    "profileUpdated": "Profile updated successfully!",
+    "errors": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "bioMaxLength": "Bio cannot exceed 500 characters",
+      "eloInvalid": "ELO rating must be a positive number"
+    }
+  },
+  "userProfile": {
+    "recentPosts": "Recent Posts",
+    "noPosts": "This user has not made any posts yet.",
+    "userNotFound": "User not found."
+  },
+  "resources": {
+    "title": "Chess Resources",
+    "subtitle": "Everything you need to improve your chess game and stay connected with the community",
+    "sections": {
+      "rules": {
+        "title": "Chess Rules & Fundamentals",
+        "subtitle": "Rules and fundamentals",
+        "basicRules": {
+          "title": "Basic Rules",
+          "content": [
+            "The game is played on an 8x8 square board with alternating light and dark squares.",
+            "Each player starts with 16 pieces: 1 king, 1 queen, 2 rooks, 2 bishops, 2 knights, and 8 pawns.",
+            "White always moves first.",
+            "The goal is to checkmate the opponent's king.",
+            "A king is in check when it is under attack and must move to safety."
+          ]
+        },
+        "pieceMovements": {
+          "title": "Piece Movements",
+          "content": [
+            "King: Moves one square in any direction",
+            "Queen: Moves any number of squares in any direction",
+            "Rook: Moves any number of squares horizontally or vertically",
+            "Bishop: Moves any number of squares diagonally",
+            "Knight: Moves in an L-shape (2 squares in one direction, then 1 square perpendicular)",
+            "Pawn: Moves forward one square, captures diagonally"
+          ]
+        },
+        "specialMoves": {
+          "title": "Special Moves",
+          "content": [
+            "Castling: King and rook move together for king safety",
+            "En passant: Pawn captures opponent's pawn that just moved two squares",
+            "Pawn promotion: Pawn reaches the opposite end and becomes any piece"
+          ]
+        }
+      },
+      "tournaments": {
+        "title": "Tournament Schedule",
+        "subtitle": "Tournament information",
+        "weeklyMeetings": {
+          "title": "Weekly Club Meetings",
+          "time": "Tuesdays & Thursdays",
+          "timeDetail": "18:00 - 21:00",
+          "location": "Campus Saint-Charles, Room 201",
+          "description": "Casual games, strategy discussions, and friendly matches."
+        },
+        "monthlyRapid": {
+          "title": "Monthly Rapid Tournament",
+          "time": "First Saturday of each month",
+          "timeDetail": "14:00 - 18:00",
+          "location": "Campus Saint-Charles, Main Hall",
+          "description": "15+5 time control, prizes for top 3 players."
+        },
+        "universityChampionship": {
+          "title": "University Championship",
+          "time": "March 15-20, 2024",
+          "timeDetail": "Daily 19:00 - 22:00",
+          "location": "Campus Saint-Charles, Auditorium",
+          "description": "Annual championship with qualification rounds."
+        },
+        "summerOpen": {
+          "title": "Summer Open Tournament",
+          "time": "July 10-12, 2024",
+          "timeDetail": "10:00 - 18:00 daily",
+          "location": "Campus Saint-Charles, Conference Center",
+          "description": "Open to all university students and staff."
+        }
+      },
+      "training": {
+        "title": "Training Materials",
+        "subtitle": "Study and training resources",
+        "openingPrinciples": {
+          "title": "Opening Principles",
+          "type": "PDF",
+          "size": "2.3 MB",
+          "description": "Essential opening principles and common openings for beginners."
+        },
+        "tacticalPuzzles": {
+          "title": "Tactical Puzzles Collection",
+          "type": "PDF",
+          "size": "4.1 MB",
+          "description": "500 tactical puzzles ranging from beginner to advanced level."
+        },
+        "endgameFundamentals": {
+          "title": "Endgame Fundamentals",
+          "type": "PDF",
+          "size": "3.7 MB",
+          "description": "Basic endgame techniques and winning strategies."
+        },
+        "strategicPlanning": {
+          "title": "Strategic Planning Guide",
+          "type": "PDF",
+          "size": "5.2 MB",
+          "description": "How to develop long-term plans and evaluate positions."
+        },
+        "notationTutorial": {
+          "title": "Chess Notation Tutorial",
+          "type": "Video",
+          "size": "15 min",
+          "description": "Learn algebraic notation to record and analyze games."
+        }
+      },
+      "literature": {
+        "title": "Chess Literature",
+        "subtitle": "Classic and modern chess books and articles",
+        "mySystem": {
+          "title": "My System",
+          "author": "Aron Nimzowitsch",
+          "year": "1925",
+          "description": "Classic work on chess strategy and positional play.",
+          "category": "Strategy"
+        },
+        "thinkLikeGrandmaster": {
+          "title": "Think Like a Grandmaster",
+          "author": "Alexander Kotov",
+          "year": "1971",
+          "description": "Insights into the thinking process of strong players.",
+          "category": "Psychology"
+        },
+        "zurichTournament": {
+          "title": "Zurich International Chess Tournament 1953",
+          "author": "David Bronstein",
+          "year": "1956",
+          "description": "Famous tournament book with detailed analysis.",
+          "category": "Tournament"
+        },
+        "artOfAttack": {
+          "title": "The Art of Attack in Chess",
+          "author": "Vladimir Vuković",
+          "year": "1965",
+          "description": "Comprehensive guide to attacking play.",
+          "category": "Tactics"
+        },
+        "positionalPlay": {
+          "title": "Positional Play",
+          "author": "Mikhail Botvinnik",
+          "year": "1973",
+          "description": "Lessons from the former World Champion.",
+          "category": "Strategy"
+        },
+        "talLifeAndGames": {
+          "title": "The Life and Games of Mikhail Tal",
+          "author": "Mikhail Tal",
+          "year": "1976",
+          "description": "Autobiography with annotated games.",
+          "category": "Biography"
+        }
+      }
+    },
+    "download": "Download",
+    "view": "View",
+    "time": "Time",
+    "location": "Location",
+    "type": "Type",
+    "size": "Size",
+    "author": "Author",
+    "year": "Year",
+    "category": "Category"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "users": "Users",
+    "posts": "Posts",
+    "statistics": "Statistics",
+    "totalUsers": "Total Users",
+    "totalPosts": "Total Posts",
+    "activeUsers": "Active Users",
+    "recentActivity": "Recent Activity"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "unauthorized": "You are not authorized to access this page",
+    "serverError": "Something went wrong. Please try again later.",
+    "networkError": "Network error. Please check your connection.",
+    "validationError": "Please check your input and try again."
+  }
+} 

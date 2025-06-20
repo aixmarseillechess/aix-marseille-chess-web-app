@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
 import { FaChess, FaBars, FaTimes, FaUser, FaSignOutAlt, FaCog, FaPlus } from 'react-icons/fa';
+import LanguageSwitcher from '../LanguageSwitcher';
 import './Navbar.css';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -51,21 +54,21 @@ const Navbar = () => {
             className={`navbar-link ${isActive('/') ? 'active' : ''}`}
             onClick={closeMenu}
           >
-            Home
+            {t('navigation.home')}
           </Link>
           <Link 
             to="/posts" 
             className={`navbar-link ${isActive('/posts') ? 'active' : ''}`}
             onClick={closeMenu}
           >
-            Posts
+            {t('navigation.posts')}
           </Link>
           <Link 
             to="/resources" 
             className={`navbar-link ${isActive('/resources') ? 'active' : ''}`}
             onClick={closeMenu}
           >
-            Resources
+            {t('navigation.resources')}
           </Link>
           
           {isAuthenticated && (
@@ -75,12 +78,14 @@ const Navbar = () => {
               onClick={closeMenu}
             >
               <FaPlus className="icon-sm" />
-              Create Post
+              {t('navigation.createPost')}
             </Link>
           )}
         </div>
 
         <div className="navbar-auth">
+          <LanguageSwitcher />
+          
           {isAuthenticated ? (
             <div className="user-menu">
               <button 
@@ -108,7 +113,7 @@ const Navbar = () => {
                     onClick={closeMenu}
                   >
                     <FaUser className="dropdown-icon" />
-                    Profile
+                    {t('navigation.profile')}
                   </Link>
                   
                   {user?.role === 'admin' && (
@@ -118,7 +123,7 @@ const Navbar = () => {
                       onClick={closeMenu}
                     >
                       <FaCog className="dropdown-icon" />
-                      Admin
+                      {t('navigation.admin')}
                     </Link>
                   )}
                   
@@ -127,7 +132,7 @@ const Navbar = () => {
                     onClick={handleLogout}
                   >
                     <FaSignOutAlt className="dropdown-icon" />
-                    Logout
+                    {t('navigation.logout')}
                   </button>
                 </div>
               )}
@@ -135,10 +140,10 @@ const Navbar = () => {
           ) : (
             <div className="auth-buttons">
               <Link to="/login" className="btn btn-secondary btn-sm">
-                Login
+                {t('navigation.login')}
               </Link>
               <Link to="/register" className="btn btn-primary btn-sm">
-                Register
+                {t('navigation.register')}
               </Link>
             </div>
           )}
