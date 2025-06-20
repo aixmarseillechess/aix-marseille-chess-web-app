@@ -1,0 +1,111 @@
+name: Deploy MERN Stack Application
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  # Build and test frontend
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: client/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: ./client
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: ./client
+        run: npm run build
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
+
+      - name: Upload frontend build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: client/dist
+
+  # Test backend
+  test-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: server/package-lock.json
+
+      - name: Install backend dependencies
+        working-directory: ./server
+        run: npm ci
+
+      - name: Run backend tests
+        working-directory: ./server
+        run: npm test
+        env:
+          NODE_ENV: test
+          MONGODB_URI: ${{ secrets.MONGODB_URI_TEST }}
+
+  # Deploy to production (example with Render)
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build-frontend, test-backend]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Render
+        uses: johnbeynon/render-deploy-action@v0.0.13
+        with:
+          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.RENDER_API_KEY }}
+
+  # Alternative: Deploy to Vercel (for frontend)
+  deploy-frontend-vercel:
+    runs-on: ubuntu-latest
+    needs: [build-frontend, test-backend]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./client
+
+  # Alternative: Deploy to Railway
+  deploy-railway:
+    runs-on: ubuntu-latest
+    needs: [build-frontend, test-backend]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Railway
+        uses: railway/deploy@v1.0.0
+        with:
+          railway_token: ${{ secrets.RAILWAY_TOKEN }}
+          service: ${{ secrets.RAILWAY_SERVICE }}
