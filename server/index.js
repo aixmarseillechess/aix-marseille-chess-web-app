@@ -12,17 +12,17 @@ import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5002;
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? [
-        'https://aix-marseille-chess-frontend.onrender.com',
-        'https://chess.aix-marseille.edu',
-        process.env.FRONTEND_URL
+  origin: process.env.NODE_ENV === 'production'
+      ? [
+        'https://aix-marseille-chess-app.netlify.app/', // Replace with your Netlify URL
+        'https://chess.aix-marseille.edu',        // Keep your custom domain
+        process.env.FRONTEND_URL                  // Optional: For flexibility
       ].filter(Boolean)
-    : ['http://localhost:5173'],
+      : ['http://localhost:5173'], // Local dev (Vite default port)
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
