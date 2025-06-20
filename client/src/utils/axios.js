@@ -1,6 +1,4 @@
 import axios from 'axios';
-import {configDotenv} from "dotenv";
-configDotenv();
 
 // Get the API URL from environment variables or use default
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5002';
