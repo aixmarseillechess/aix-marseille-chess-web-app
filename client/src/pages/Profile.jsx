@@ -26,6 +26,13 @@ const Profile = () => {
     }
   }, [user]);
 
+  // Watch for profile picture changes
+  useEffect(() => {
+    if (user && user.profilePicture) {
+      setPreviewImage(user.profilePicture);
+    }
+  }, [user?.profilePicture]);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -45,7 +52,11 @@ const Profile = () => {
 
   const handleImageUpload = async () => {
     if (profileImage) {
-      await uploadProfilePicture(profileImage);
+      const result = await uploadProfilePicture(profileImage);
+      if (result.success) {
+        // Clear the selected file - the preview will be updated by useEffect
+        setProfileImage(null);
+      }
     }
   };
   
