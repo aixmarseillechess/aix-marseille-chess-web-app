@@ -182,23 +182,41 @@ router.put('/profile', protect, async (req, res) => {
 // @access  Private
 router.post('/profile-picture', protect, upload.single('profilePicture'), async (req, res) => {
     try {
+        console.log('Profile picture upload request received');
+        console.log('User ID:', req.user._id);
+        console.log('File:', req.file);
+        
         if (!req.file) {
+            console.log('No file provided in request');
             return res.status(400).json({ message: 'No image file provided.' });
         }
 
+        console.log('File details:', {
+            originalname: req.file.originalname,
+            mimetype: req.file.mimetype,
+            size: req.file.size,
+            buffer: req.file.buffer ? 'Buffer present' : 'No buffer'
+        });
+
         // Upload to Cloudinary
+        console.log('Attempting to upload to Cloudinary...');
         const result = await uploadImage(
             req.file.buffer,
             'aix-marseille-chess/profiles',
             req.file.mimetype
         );
 
+        console.log('Cloudinary upload result:', result);
+
         // Update user
+        console.log('Updating user in database...');
         const user = await User.findByIdAndUpdate(
             req.user._id,
             { profilePicture: result.url },
             { new: true }
         );
+
+        console.log('User updated successfully:', user.profilePicture);
 
         res.json({
             message: 'Profile picture updated successfully.',
@@ -207,6 +225,7 @@ router.post('/profile-picture', protect, upload.single('profilePicture'), async 
 
     } catch (error) {
         console.error('Upload profile picture error:', error);
+        console.error('Error stack:', error.stack);
         res.status(500).json({ message: 'Failed to upload profile picture.' });
     }
 });

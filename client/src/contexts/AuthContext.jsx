@@ -197,8 +197,16 @@ function AuthProvider({ children }) {
 
   // Upload profile picture
   const uploadProfilePicture = async (file) => {
+    console.log('uploadProfilePicture called with file:', {
+      name: file.name,
+      size: file.size,
+      type: file.type
+    });
+
     const formData = new FormData();
     formData.append('profilePicture', file);
+
+    console.log('FormData created, making request to /api/auth/profile-picture');
 
     try {
         const res = await axios.post('/api/auth/profile-picture', formData, {
@@ -206,6 +214,8 @@ function AuthProvider({ children }) {
                 'Content-Type': 'multipart/form-data'
             }
         });
+
+        console.log('Upload response received:', res.data);
 
         dispatch({
             type: AUTH_ACTIONS.UPDATE_PROFILE,
@@ -215,6 +225,10 @@ function AuthProvider({ children }) {
         toast.success('Profile picture updated!');
         return { success: true };
     } catch (error) {
+        console.error('Upload error:', error);
+        console.error('Error response:', error.response?.data);
+        console.error('Error status:', error.response?.status);
+        
         const message = error.response?.data?.message || 'Upload failed.';
         toast.error(message);
         return { success: false, error: message };
