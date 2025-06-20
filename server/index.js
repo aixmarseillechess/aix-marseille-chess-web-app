@@ -17,10 +17,8 @@ const PORT = process.env.PORT || 5002;
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-      ? [
-        'https://aix-marseille-chess-app.netlify.app/'
-      ].filter(Boolean)
-      : ['http://localhost:5173'], // Local dev (Vite default port)
+      ? 'https://aix-marseille-chess-app.netlify.app' // Production origin (no trailing slash!)
+      : 'http://localhost:5173', // Local development
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
