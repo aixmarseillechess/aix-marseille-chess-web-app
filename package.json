@@ -1,0 +1,29 @@
+{
+  "name": "aix-marseille-chess",
+  "version": "1.0.0",
+  "description": "Official chess club website for Aix-Marseille University",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-server": "npm install",
+    "install-all": "npm run install-server && npm run install-client"
+  },
+  "keywords": [
+    "chess",
+    "university",
+    "blog",
+    "react",
+    "nodejs"
+  ],
+  "author": "Aix-Marseille Chess Club",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.10"
+  }
+}
