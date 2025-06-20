@@ -18,9 +18,7 @@ const PORT = process.env.PORT || 5002;
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
       ? [
-        'https://aix-marseille-chess-app.netlify.app/', // Replace with your Netlify URL
-        'https://chess.aix-marseille.edu',        // Keep your custom domain
-        process.env.FRONTEND_URL                  // Optional: For flexibility
+        'https://aix-marseille-chess-app.netlify.app/',
       ].filter(Boolean)
       : ['http://localhost:5173'], // Local dev (Vite default port)
   credentials: true,
